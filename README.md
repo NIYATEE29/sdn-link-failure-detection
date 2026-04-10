@@ -1,2 +1,60 @@
-# sdn-link-failure-detection
-SDN project using Mininet and Ryu to demonstrate link failure detection and recovery with dynamic flow rules.
+# SDN Link Failure Detection using Mininet and Ryu
+
+## Problem Statement
+
+This project demonstrates link failure detection and recovery in a Software Defined Network (SDN) using Mininet and the Ryu controller.
+
+## Tools Used
+
+* Mininet
+* Ryu Controller
+* Python
+
+## Topology
+
+Linear topology with 3 switches and 3 hosts:
+h1 - s1 - s2 - s3 - h3
+
+## Steps to Run
+
+1. Activate environment:
+   source ryu38/bin/activate
+
+2. Run controller:
+   ryu-manager link_fail.py
+
+3. Start Mininet:
+   sudo mn --topo linear,3 --controller remote
+
+4. Test:
+   pingall
+   link s1 s2 down
+   pingall
+   link s1 s2 up
+   pingall
+
+## Expected Output
+
+* Initially: 0% packet loss
+* After link failure: packet loss observed
+* After recovery: 0% packet loss
+
+## Observations
+
+* Controller installs flow rules dynamically
+* Link failure disrupts communication
+* Network recovers after link restoration
+
+## Proof of Execution
+
+Include screenshots of:
+
+* Controller running
+* Ping results
+* Link failure
+* Recovery
+* Flow tables
+
+## Conclusion
+
+This project successfully demonstrates SDN-based link failure detection and recovery using dynamic flow rule installation.
