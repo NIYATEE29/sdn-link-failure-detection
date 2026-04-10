@@ -47,13 +47,20 @@ h1 - s1 - s2 - s3 - h3
 
 ## Proof of Execution
 
-Include screenshots of:
+### 1. Initial Connectivity
+![Ping](1_ping_success.png)
 
-* Controller running
-* Ping results
-* Link failure
-* Recovery
-* Flow tables
+### 2. Link Down
+![Link Down](2_link_down.png)
+
+### 3. Failure & Recovery
+![Failure](3_failure_recovery.png)
+
+### 4. Controller Running
+![Controller](4_controller.png)
+
+### 5. Flow Table
+![Flow Table](5_flow_table.png)
 
 ## Conclusion
 
